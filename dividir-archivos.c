@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /*### Enunciado del ejercicio
 
@@ -58,7 +59,25 @@ codigo     cantidad
 #define ARCH_MAYORISTAS "./mayorista.dat"
 #define L 100
 
+typedef struct {
+  int cod, cant;
+}t_mov;
+
 int main()
 {
+  t_mov mov;
+  FILE *p_mov, *p_min, *p_may;
+  mov = fopen(ARCH_MOVIMIENTOS, "rb");
+  min = fopen(ARCH_MINORISTAS, "wb");
+  may = fopen(ARCH_MAYORISTAS, "wb");
 
+  if(mov == NULL || min == NULL || may == NULL)
+  {
+    printf("No se puede abrir el archivo...");
+    exit(1);
 }
+
+fget()
+
+
+
