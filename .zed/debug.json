@@ -1,0 +1,25 @@
+// Project-local debug tasks
+//
+// For more documentation on how to configure debug tasks,
+// see: https://zed.dev/docs/debugger
+[
+  {
+    "label": "Debug C",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+
+    "build": {
+      "command": "gcc",
+      "args": [
+        "-g",
+        "holamundo.c",
+        "-o",
+        "holamundo"
+      ],
+      "cwd": "$ZED_WORKTREE_ROOT"
+    },
+
+    "program": "$ZED_WORKTREE_ROOT/holamundo",
+    "cwd": "$ZED_WORKTREE_ROOT"
+  }
+]
